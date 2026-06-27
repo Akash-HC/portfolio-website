@@ -1,11 +1,317 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import '../styles/global.css';
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>AKASH HC - Cloud Platform, DevOps & SRE</title><!--[cite: 14] -->
+    
+    <!-- Modern, geometric font import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+      body {
+        font-family: 'Outfit', sans-serif;
+      }
+      /* Custom animation keyframes */
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in {
+        animation: fadeInUp 0.8s ease-out forwards;
+        opacity: 0;
+      }
+      .delay-100 { animation-delay: 100ms; }
+      .delay-200 { animation-delay: 200ms; }
+      .delay-300 { animation-delay: 300ms; }
+      .delay-400 { animation-delay: 400ms; }
+      .delay-500 { animation-delay: 500ms; }
+      
+      /* Glowing text effect */
+      .glow-text {
+        text-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+      }
+    </style>
+  </head>
+  <body class="bg-[#050b14] text-slate-300 leading-relaxed selection:bg-sky-500 selection:text-white pb-20 overflow-x-hidden">
+    
+    <!-- Immersive background glow -->
+    <div class="fixed top-[-10%] left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-sky-600/10 blur-[150px] rounded-full pointer-events-none -z-10"></div>
+    <div class="fixed bottom-[-10%] right-[-5%] w-[600px] h-[600px] bg-teal-600/10 blur-[150px] rounded-full pointer-events-none -z-10"></div>
+
+    <!-- FLOATING NAVIGATION BAR -->
+    <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 animate-fade-in">
+      <div class="flex items-center gap-6 px-6 py-3 bg-slate-900/60 backdrop-blur-md border border-slate-700/50 rounded-full shadow-[0_0_20px_rgba(0,0,0,0.5)]">
+        <a href="#about" class="text-sm font-semibold text-slate-300 hover:text-sky-400 transition-colors">About</a>
+        <a href="#experience" class="text-sm font-semibold text-slate-300 hover:text-sky-400 transition-colors">Experience</a>
+        <a href="#skills" class="text-sm font-semibold text-slate-300 hover:text-sky-400 transition-colors">Skills</a>
+        <a href="#contact" class="text-sm font-bold text-sky-400 hover:text-sky-300 transition-colors">Let's Talk</a>
+      </div>
+    </nav>
+
+    <div class="max-w-4xl mx-auto px-6 py-24 lg:py-32 relative z-10">
+      
+      <!-- HERO SECTION -->
+      <header id="about" class="mb-24 text-center sm:text-left animate-fade-in delay-100 scroll-mt-32">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-emerald-400 uppercase bg-emerald-400/10 rounded-full border border-emerald-400/20 backdrop-blur-sm shadow-[0_0_15px_rgba(52,211,153,0.2)]">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          Available for Opportunities
+        </div>
+        <h1 class="text-6xl sm:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-white via-sky-100 to-sky-500 tracking-tight mb-4 glow-text">
+          AKASH HC<!--[cite: 14] -->
+        </h1>
+        <h2 class="text-2xl sm:text-3xl font-semibold text-sky-400 mb-8 tracking-wide">
+          Cloud Platform, DevOps & SRE<!--[cite: 14] -->
+        </h2>
+        
+        <!-- Social Links & Action Buttons -->
+        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-4">
+          
+          <!-- Primary CTA: Download Resume (Make sure to put AkashHC-Cloud-Platform-Engineer-resume.pdf in your public/ folder) -->
+          <a href="/AkashHC-Cloud-Platform-Engineer-resume.pdf" download class="flex items-center gap-2 text-slate-900 font-bold px-6 py-2.5 bg-gradient-to-r from-sky-400 to-teal-400 hover:scale-105 rounded-xl transition-all duration-300 shadow-[0_0_15px_rgba(56,189,248,0.4)]">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+            Resume
+          </a>
+
+          <a href="https://linkedin.com/in/akash-hc-95284514b" target="_blank" class="group flex items-center gap-2 text-slate-300 font-medium px-4 py-2 bg-slate-800/40 hover:bg-sky-500/10 hover:border-sky-500/30 hover:text-white rounded-xl border border-slate-700/50 transition-all duration-300 backdrop-blur-md">
+            <svg class="w-5 h-5 text-sky-500 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0H5C2.239 0 0 2.239 0 5V19C0 21.761 2.239 24 5 24H19C21.761 24 24 21.761 24 19V5C24 2.239 21.761 0 19 0ZM8 19H5V8H8V19ZM6.5 6.732C5.534 6.732 4.75 5.942 4.75 4.968C4.75 3.994 5.534 3.204 6.5 3.204C7.466 3.204 8.25 3.994 8.25 4.968C8.25 5.942 7.466 6.732 6.5 6.732ZM20 19H17V13.396C17 10.028 13 10.283 13 13.396V19H10V8H13V9.765C14.396 7.179 20 6.988 20 12.241V19Z"/></svg>
+            LinkedIn<!--[cite: 14] -->
+          </a>
+          
+          <a href="https://github.com/Akash-HC" target="_blank" class="group flex items-center gap-2 text-slate-300 font-medium px-4 py-2 bg-slate-800/40 hover:bg-sky-500/10 hover:border-sky-500/30 hover:text-white rounded-xl border border-slate-700/50 transition-all duration-300 backdrop-blur-md">
+            <svg class="w-5 h-5 text-white group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12C0 17.31 3.435 21.81 8.205 23.385C8.805 23.49 9.03 23.13 9.03 22.815C9.03 22.53 9.015 21.585 9.015 20.58C5.67 21.3 4.965 18.96 4.965 18.96C4.425 17.58 3.645 17.22 3.645 17.22C2.565 16.485 3.725 16.5 3.725 16.5C4.92 16.59 5.55 17.73 5.55 17.73C6.615 19.56 8.325 19.035 8.985 18.72C9.09 17.97 9.39 17.445 9.72 17.145C7.05 16.845 4.245 15.81 4.245 11.16C4.245 9.825 4.725 8.73 5.505 7.875C5.385 7.575 4.965 6.33 5.625 4.65C5.625 4.65 6.66 4.32 8.985 5.895C9.975 5.625 11.025 5.49 12.075 5.49C13.125 5.49 14.175 5.625 15.165 5.895C17.49 4.32 18.525 4.65 18.525 4.65C19.185 6.33 18.765 7.575 18.645 7.875C19.425 8.73 19.905 9.825 19.905 11.16C19.905 15.825 17.085 16.83 14.415 17.13C14.805 17.475 15.165 18.135 15.165 19.155C15.165 20.61 15.15 21.78 15.15 22.815C15.15 23.13 15.375 23.505 15.99 23.385C20.76 21.81 24 17.31 24 12C24 5.37 18.63 0 12 0Z"/></svg>
+            GitHub<!--[cite: 14] -->
+          </a>
+        </div>
+      </header>
+
+      <!-- ENGINEERING PHILOSOPHY SECTION -->
+      <section class="mb-24 animate-fade-in delay-200">
+        <h3 class="text-2xl font-bold text-white tracking-wide border-b border-slate-700/50 pb-3 mb-8 flex items-center gap-3">
+          <span class="w-10 h-1 bg-gradient-to-r from-sky-400 to-teal-400 rounded-full"></span> Engineering Philosophy
+        </h3>
+        <p class="text-xl text-slate-300 leading-relaxed font-light">
+          I sit squarely at the intersection of <strong class="text-white font-semibold">Platform Engineering, DevOps, and SRE</strong><!--[cite: 14] -->. 
+          My core mission is to architect secure, highly available cloud foundations on AWS while aggressively eliminating operational toil<!--[cite: 14] -->. 
+          By merging scalable <span class="text-sky-400 font-semibold">Kubernetes (EKS)</span> platform design with <span class="text-teal-400 font-semibold">Terraform and GitOps</span> automation, I accelerate developer velocity without ever sacrificing production reliability<!--[cite: 14] -->. I engineer deep system observability and automate complex workflows to ensure enterprise SaaS environments run flawlessly at scale<!--[cite: 14] -->.
+        </p>
+      </section>
+
+      <!-- IMPACT & EXPERIENCE SECTION -->
+      <section id="experience" class="mb-24 animate-fade-in delay-300 scroll-mt-32">
+        <h3 class="text-2xl font-bold text-white tracking-wide border-b border-slate-700/50 pb-3 mb-10 flex items-center gap-3">
+          <span class="w-10 h-1 bg-gradient-to-r from-sky-400 to-teal-400 rounded-full"></span> Impact & Experience
+        </h3>
+        
+        <div class="space-y-16">
+          
+          <!-- Wolken -->
+          <div class="relative pl-6 md:pl-12 border-l-2 border-slate-700/50 group">
+            <div class="absolute w-5 h-5 bg-[#050b14] border-[3px] border-sky-400 rounded-full -left-[11.5px] top-1.5 group-hover:bg-sky-400 group-hover:shadow-[0_0_20px_rgba(56,189,248,0.8)] transition-all duration-500"></div>
+            
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+              <h4 class="text-2xl font-extrabold text-white">Associate 1 - DevSecOps</h4><!--[cite: 14] -->
+              <span class="text-sm font-bold text-slate-900 bg-gradient-to-r from-sky-400 to-teal-400 px-4 py-1.5 rounded-full mt-2 md:mt-0 w-fit shadow-[0_0_15px_rgba(56,189,248,0.3)]">Dec 2024 - Present</span><!--[cite: 14] -->
+            </div>
+            <div class="text-sky-400 text-lg font-medium mb-6">Wolken Software • Bengaluru, India</div><!--[cite: 14] -->
+            
+            <div class="grid gap-4 text-slate-300 text-base">
+              
+              <div class="bg-sky-500/5 border border-sky-500/20 hover:border-sky-500/40 hover:bg-sky-500/10 transition-all duration-300 rounded-xl p-6">
+                <div class="flex items-start gap-4">
+                  <svg class="w-7 h-7 text-teal-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                  <div>
+                    <h5 class="text-white text-lg font-bold mb-2">Toil Reduction & Automation</h5>
+                    <p class="text-slate-300 leading-relaxed">
+                      Aggressively eliminated repetitive operational toil by developing sophisticated Bash and Python automation targeting database refreshes and customer onboarding. This strategic automation <strong class="text-sky-400">reduced manual effort by 80%</strong> and actively saves the team <strong class="text-teal-400">10+ engineering hours per week</strong>.<!--[cite: 14] -->
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-slate-800/30 border border-slate-700/50 hover:border-sky-500/30 hover:bg-slate-800/50 transition-all duration-300 rounded-xl p-6">
+                <div class="flex items-start gap-4">
+                  <svg class="w-7 h-7 text-teal-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                  <div>
+                    <h5 class="text-white text-lg font-bold mb-2">DevOps & Deployment Velocity</h5>
+                    <p class="text-slate-300 leading-relaxed">
+                      Overhauled the software delivery lifecycle by provisioning infrastructure with <span class="text-sky-300 font-semibold">Terraform</span> and engineering robust GitOps pipelines via <strong class="text-white">Jenkins and Argo CD</strong>. This approach <strong class="text-sky-400">reduced manual deployment effort by 70%</strong> and accelerated overall deployment efficiency by 50-60%.<!--[cite: 14] -->
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-slate-800/30 border border-slate-700/50 hover:border-sky-500/30 hover:bg-slate-800/50 transition-all duration-300 rounded-xl p-6">
+                <div class="flex items-start gap-4">
+                  <svg class="w-7 h-7 text-teal-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                  <div>
+                    <h5 class="text-white text-lg font-bold mb-2">Site Reliability & Observability</h5>
+                    <p class="text-slate-300 leading-relaxed">
+                      Maintained stringent availability and performance SLAs for enterprise Java, Angular, Node.js, and Next.js applications running in production. Deployed comprehensive observability stacks—including <strong class="text-white">Amazon CloudWatch, ELK, and OpenSearch</strong>—to enable centralized log analytics and drastically accelerate production incident resolution.<!--[cite: 14] -->
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-slate-800/30 border border-slate-700/50 hover:border-sky-500/30 hover:bg-slate-800/50 transition-all duration-300 rounded-xl p-6">
+                <div class="flex items-start gap-4">
+                  <svg class="w-7 h-7 text-teal-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                  <div>
+                    <h5 class="text-white text-lg font-bold mb-2">Platform Modernization & Zero-Trust</h5>
+                    <p class="text-slate-300 leading-relaxed">
+                      Spearheaded the architectural migration of legacy workloads from EC2 to highly scalable <span class="text-sky-300 font-semibold">Amazon EKS</span> clusters. Standardized Docker and Kubernetes practices to <strong class="text-sky-400">reduce deployment failures by 50%</strong>, while hardening the entire platform with <strong class="text-white">HashiCorp Vault</strong>, AWS IAM, and OIDC integrations.<!--[cite: 14] -->
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Freelance -->
+          <div class="relative pl-6 md:pl-12 border-l-2 border-slate-700/50 group mt-16">
+            <div class="absolute w-5 h-5 bg-[#050b14] border-[3px] border-slate-500 rounded-full -left-[11.5px] top-1.5 group-hover:border-teal-400 group-hover:shadow-[0_0_20px_rgba(45,212,191,0.5)] transition-all duration-500"></div>
+            
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+              <h4 class="text-2xl font-extrabold text-white">DevOps Consultant</h4><!--[cite: 14] -->
+              <span class="text-sm font-semibold text-slate-400 mt-2 md:mt-0">May 2024 - Nov 2024</span><!--[cite: 14] -->
+            </div>
+            <div class="text-slate-400 text-lg font-medium mb-6">Freelance • Remote</div><!--[cite: 14] -->
+            
+            <div class="grid gap-4 text-slate-300 text-base">
+              
+              <div class="bg-slate-800/30 border border-slate-700/50 hover:border-teal-400/30 hover:bg-slate-800/50 transition-all duration-300 rounded-xl p-6">
+                <div class="flex items-start gap-4">
+                  <svg class="w-7 h-7 text-sky-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                  <div>
+                    <h5 class="text-white text-lg font-bold mb-2">Automation & Toil Reduction</h5>
+                    <p class="text-slate-300 leading-relaxed">
+                      Delivered custom <strong class="text-white">Bash and Python</strong> automation solutions that targeted operational bottlenecks, effectively <strong class="text-teal-400">reducing repetitive manual effort by up to 70%</strong> for client organizations.<!--[cite: 14] -->
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-slate-800/30 border border-slate-700/50 hover:border-teal-400/30 hover:bg-slate-800/50 transition-all duration-300 rounded-xl p-6">
+                <div class="flex items-start gap-4">
+                  <svg class="w-7 h-7 text-sky-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"></path></svg>
+                  <div>
+                    <h5 class="text-white text-lg font-bold mb-2">Infrastructure & CI/CD Optimization</h5>
+                    <p class="text-slate-300 leading-relaxed">
+                      Provisioned scalable AWS infrastructure utilizing <strong class="text-white">Terraform and CloudFormation</strong> to ensure environment parity. Supported <span class="text-teal-300 font-semibold">Docker and Kubernetes</span> based deployments while optimizing Jenkins CI/CD pipelines to dramatically improve release reliability.<!--[cite: 14] -->
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SKILLS SECTION -->
+      <section id="skills" class="mb-24 animate-fade-in delay-400 scroll-mt-32">
+        <h3 class="text-2xl font-bold text-white tracking-wide border-b border-slate-700/50 pb-3 mb-8 flex items-center gap-3">
+          <span class="w-10 h-1 bg-gradient-to-r from-sky-400 to-teal-400 rounded-full"></span> Technical Arsenal
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <div class="bg-slate-800/20 backdrop-blur-md p-8 rounded-2xl border border-slate-700/50 hover:border-sky-500/50 hover:bg-slate-800/40 transition-all duration-300">
+            <h4 class="text-xl text-sky-400 font-bold mb-5 flex items-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
+              Cloud Platform (AWS)<!--[cite: 14] -->
+            </h4>
+            <div class="flex flex-wrap gap-2">
+              {['EC2', 'EKS', 'IAM', 'Route53', 'S3', 'RDS', 'Lambda', 'GuardDuty', 'Global Accelerator', 'NLB', 'SES'].map(skill => (
+                <span class="px-3 py-1.5 text-sm font-medium bg-[#050b14] border border-slate-700/80 rounded-lg text-slate-300 shadow-inner hover:text-white hover:border-sky-400/50 transition-colors cursor-default">{skill}</span>
+              ))}
+            </div>
+          </div>
+
+          <div class="bg-slate-800/20 backdrop-blur-md p-8 rounded-2xl border border-slate-700/50 hover:border-teal-400/50 hover:bg-slate-800/40 transition-all duration-300">
+            <h4 class="text-xl text-teal-400 font-bold mb-5 flex items-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+              Container Platform & IaC<!--[cite: 14] -->
+            </h4>
+            <div class="flex flex-wrap gap-2">
+              {['Kubernetes', 'Docker', 'Helm', 'Terraform'].map(skill => (
+                <span class="px-3 py-1.5 text-sm font-medium bg-[#050b14] border border-slate-700/80 rounded-lg text-slate-300 shadow-inner hover:text-white hover:border-teal-400/50 transition-colors cursor-default">{skill}</span>
+              ))}
+            </div>
+          </div>
+          
+          <div class="bg-slate-800/20 backdrop-blur-md p-8 rounded-2xl border border-slate-700/50 hover:border-sky-500/50 hover:bg-slate-800/40 transition-all duration-300">
+            <h4 class="text-xl text-sky-400 font-bold mb-5 flex items-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+              DevOps & Scripting<!--[cite: 14] -->
+            </h4>
+            <div class="flex flex-wrap gap-2">
+              {['Jenkins', 'ArgoCD', 'GitOps', 'Bash', 'Python', 'Groovy', 'YAML', 'MySQL', 'Linux'].map(skill => (
+                <span class="px-3 py-1.5 text-sm font-medium bg-[#050b14] border border-slate-700/80 rounded-lg text-slate-300 shadow-inner hover:text-white hover:border-sky-400/50 transition-colors cursor-default">{skill}</span>
+              ))}
+            </div>
+          </div>
+
+          <div class="bg-slate-800/20 backdrop-blur-md p-8 rounded-2xl border border-slate-700/50 hover:border-teal-400/50 hover:bg-slate-800/40 transition-all duration-300">
+            <h4 class="text-xl text-teal-400 font-bold mb-5 flex items-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+              Observability & Security<!--[cite: 14] -->
+            </h4>
+            <div class="flex flex-wrap gap-2">
+              {['CloudWatch', 'ELK Stack', 'OpenSearch', 'HashiCorp Vault', 'IAM / OIDC'].map(skill => (
+                <span class="px-3 py-1.5 text-sm font-medium bg-[#050b14] border border-slate-700/80 rounded-lg text-slate-300 shadow-inner hover:text-white hover:border-teal-400/50 transition-colors cursor-default">{skill}</span>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- EDUCATION SECTION -->
+      <section class="animate-fade-in delay-500">
+        <h3 class="text-2xl font-bold text-white tracking-wide border-b border-slate-700/50 pb-3 mb-8 flex items-center gap-3">
+          <span class="w-10 h-1 bg-gradient-to-r from-sky-400 to-teal-400 rounded-full"></span> Education & Credentials
+        </h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-slate-800/20 backdrop-blur-md p-8 rounded-2xl border border-slate-700/50 relative overflow-hidden group">
+            <div class="absolute inset-0 bg-gradient-to-r from-sky-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <h4 class="text-xl font-bold text-white mb-2 relative z-10">Cloud Computing & DevOps Certification<!--[cite: 14] --></h4>
+            <div class="text-sky-400 text-base font-medium mb-4 relative z-10">IIT Roorkee | Feb 2023 - Mar 2024<!--[cite: 14] --></div>
+            <p class="text-sm text-slate-400 mb-5 relative z-10">Mastered end-to-end production implementations of AWS, Terraform, CI/CD, Docker, and Kubernetes.<!--[cite: 14] --></p>
+            <div class="text-xs text-slate-400 font-mono bg-[#050b14] inline-block px-3 py-1.5 rounded-lg border border-slate-700 relative z-10">ID: IPTIH2403200<!--[cite: 14] --></div>
+          </div>
+
+          <div class="bg-slate-800/20 backdrop-blur-md p-8 rounded-2xl border border-slate-700/50 flex flex-col justify-center relative overflow-hidden group">
+            <div class="absolute inset-0 bg-gradient-to-r from-teal-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <h4 class="text-xl font-bold text-white mb-2 relative z-10">Master's In Biochemistry<!--[cite: 14] --></h4>
+            <div class="text-teal-400 text-base font-medium mb-1 relative z-10">Dayananda Sagar University<!--[cite: 14] --></div>
+            <div class="text-sm text-slate-400 relative z-10">2020 - 2022 | Bengaluru, India<!--[cite: 14] --></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DEDICATED CONTACT SECTION -->
+      <section id="contact" class="mt-32 animate-fade-in delay-500 bg-gradient-to-br from-slate-800/40 to-[#050b14] border border-slate-700/50 rounded-3xl p-10 sm:p-16 text-center relative overflow-hidden backdrop-blur-xl scroll-mt-32">
+        <!-- Inner glow -->
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-sky-500/10 via-transparent to-transparent pointer-events-none"></div>
+        
+        <h3 class="text-4xl sm:text-5xl font-extrabold text-white mb-6 relative z-10 tracking-tight">Let's Automate the Future.</h3>
+        <p class="text-lg text-slate-400 mb-10 max-w-2xl mx-auto relative z-10">
+          Whether you need an ironclad cloud architecture, streamlined CI/CD pipelines, or zero-touch automation—my inbox is always open.
+        </p>
+        <a href="mailto:akashchalkodu@gmail.com" class="relative z-10 inline-flex items-center gap-3 bg-gradient-to-r from-sky-500 to-teal-400 text-slate-900 font-bold text-lg px-8 py-4 rounded-full hover:scale-105 transition-transform duration-300 shadow-[0_0_20px_rgba(56,189,248,0.4)]">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+          akashchalkodu@gmail.com<!--[cite: 14] -->
+        </a>
+      </section>
+
+    </div>
+  </body>
+</html>
